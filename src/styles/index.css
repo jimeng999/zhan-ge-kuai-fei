@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: rgba(120, 113, 108, 0.2);
+  }
+  body {
+    @apply bg-war-950 text-war-100;
+  }
+}
+
+@layer components {
+  .pigeon-btn {
+    @apply px-5 py-2.5 rounded-lg font-semibold transition-all duration-200
+           bg-pigeon-600 hover:bg-pigeon-500 text-white
+           active:scale-95 focus:outline-none focus:ring-2 focus:ring-pigeon-400 focus:ring-offset-2 focus:ring-offset-war-950;
+  }
+  .pigeon-btn-secondary {
+    @apply px-5 py-2.5 rounded-lg font-semibold transition-all duration-200
+           bg-transparent border border-pigeon-600 hover:bg-pigeon-950 text-pigeon-400
+           active:scale-95 focus:outline-none focus:ring-2 focus:ring-pigeon-400 focus:ring-offset-2 focus:ring-offset-war-950;
+  }
+  .card {
+    @apply bg-war-900 border border-war-800 rounded-xl p-6
+           hover:border-pigeon-700 transition-colors duration-200;
+  }
+  .card-glow {
+    @apply bg-war-900 border border-pigeon-800/50 rounded-xl p-6
+           shadow-lg shadow-pigeon-950/30;
+  }
+  .tag {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+           bg-pigeon-950 text-pigeon-300 border border-pigeon-800;
+  }
+  .tag-swift {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+           bg-swift-900 text-swift-300 border border-swift-800;
+  }
+  .input-field {
+    @apply w-full bg-war-950 border border-war-700 rounded-lg px-4 py-2.5
+           text-war-100 placeholder-war-500
+           focus:outline-none focus:ring-2 focus:ring-pigeon-500 focus:border-transparent
+           transition-colors duration-200;
+  }
+}
